@@ -1,8 +1,13 @@
-FROM debian:jessie
+ARG BUILD_FROM=hassioaddons/base-amd64:1.3.2
+FROM ${BUILD_FROM}
 
 # Setup base
-RUN apk add --no-cache nodejs
-RUN apk add --no-cache nodejs-npm 
+RUN \
+    apk add --no-cache \
+        git \
+        nodejs \
+        nodejs-npm \
+    \
 RUN npm -S install alexa-reminders
         
 COPY index.js /
