@@ -14,6 +14,9 @@
     "config:rw",
     "ssl"
   ],
+  "ports": {
+    "8091/tcp": 81
+  },
   "options": {
     "amazon_login": "",
     "amazon_password": "",
