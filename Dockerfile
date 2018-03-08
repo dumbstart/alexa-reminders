@@ -1,17 +1,10 @@
 ARG BUILD_FROM=hassioaddons/base-amd64:1.3.2
 FROM ${BUILD_FROM}
 
-# Setup base
 RUN \
      apk add --no-cache \
-            git \
             nodejs \
-            nodejs-npm \
-        \
-        && npm set unsafe-perm true \
-        \
-        && npm -g -S install \
-            alexa-reminders
+            nodejs-npm
         
 COPY index.js /
 
