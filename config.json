@@ -1,20 +1,10 @@
 {
   "name": "Alexa Reminders",
-  "version": "dev",
-  "slug": "reminders",
-  "description": "Create reminders on your Alexa device",
-  "url": "https://github.com/dumbstart/alexa-reminders.git",
-  "startup": "application",
+  "version": "0.1",
+  "slug": "alexa_reminders",
+  "description": "Run a server to create Alexa reminders",
+  "startup": "before",
   "boot": "auto",
-  "host_network": true,
-  "privileged": [],
-  "map": [
-    "config:rw",
-    "ssl"
-  ],
-  "ports": {
-    "8091/tcp": 8091
-  },
   "options": {
     "amazon_login": "",
     "amazon_pass": "",
@@ -24,5 +14,8 @@
     "amazon_login": "str",
     "amazon_pass": "str",
     "alexa_device": "str"
+  },
+  "ports": {
+    "8091/tcp": 8091
   }
 }
