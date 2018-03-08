@@ -1,4 +1,1 @@
-#!/bin/sh
-
-echo "Starting Node"
-# node index.js
+node index.js
