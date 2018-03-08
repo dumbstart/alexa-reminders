@@ -3,12 +3,15 @@ FROM ${BUILD_FROM}
 
 # Setup base
 RUN \
-    apk add --no-cache \
-        git \
-        nodejs \
-        nodejs-npm \
-    \
-RUN npm -S install alexa-reminders
+     apk add --no-cache \
+            git \
+            nodejs \
+            nodejs-npm \
+        \
+        && npm set unsafe-perm true \
+        \
+        && npm -g -S install \
+            alexa-reminders
         
 COPY index.js /
 
