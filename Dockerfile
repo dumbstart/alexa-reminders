@@ -3,13 +3,12 @@ FROM debian:jessie
 # Setup base
 RUN apk add --no-cache \
         nodejs \
-        nodejs-npm \
+        nodejs-npm 
 RUN npm -S install alexa-reminders
         
 COPY index.js /
 
-RUN \
-    npm install
+RUN npm install
 
 EXPOSE 8091
 
