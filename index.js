@@ -11,7 +11,7 @@ var fs = require("fs");
 var contents = fs.readFileSync("/data/options.json");
 var hassio_config = JSON.parse(contents);
 
-reminders.login(hassio_config.alexa_device_name, hassio_config.amazon_login, hassio_config.amazon_pass, function(error, response, config){
+reminders.login(hassio_config.alexa_device, hassio_config.amazon_login, hassio_config.amazon_pass, function(error, response, config){
   savedConfig = config
   console.log(response)
 })

@@ -24,7 +24,7 @@
   },
   "schema": {
     "amazon_login": "str",
-    "amazon_name": "str",
+    "amazon_pass": "str",
     "alexa_device": "str"
   }
 }
