@@ -15,7 +15,7 @@
     "ssl"
   ],
   "ports": {
-    "8091/tcp": 81
+    "8091/tcp": 8091
   },
   "options": {
     "amazon_login": "",
