@@ -1,5 +1,7 @@
-ARG BUILD_FROM=hassioaddons/base-amd64:1.3.2
-FROM ${BUILD_FROM}
+ARG BUILD_FROM
+FROM $BUILD_FROM
+
+ENV LANG C.UTF-8
 
 RUN \
      apk add --no-cache \
