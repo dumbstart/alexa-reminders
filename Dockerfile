@@ -3,19 +3,14 @@ FROM $BUILD_FROM
 
 ENV LANG C.UTF-8
 
-RUN \
-     apk add --no-cache \
-            nodejs \
-            nodejs-npm
-        
-COPY index.js /
-
-RUN npm install
-
+RUN apk add --no-cache nodejs
+RUN apk add --no-cache nodejs-npm
 EXPOSE 8091
 
+COPY index.js /
 COPY run.sh /
 
+RUN npm install
 RUN chmod a+x /run.sh
 
 CMD [ "/run.sh" ]
