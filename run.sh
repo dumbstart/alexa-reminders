@@ -1,5 +1,4 @@
-#!/usr/bin/bash 
+#!/bin/sh
 
-ls -la
 echo "Starting Node"
 # node index.js
