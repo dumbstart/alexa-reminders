@@ -1,9 +1,8 @@
 FROM debian:jessie
 
 # Setup base
-RUN apk add --no-cache \
-        nodejs \
-        nodejs-npm 
+RUN apk add --no-cache nodejs
+RUN apk add --no-cache nodejs-npm 
 RUN npm -S install alexa-reminders
         
 COPY index.js /
