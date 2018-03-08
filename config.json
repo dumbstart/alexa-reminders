@@ -1,0 +1,27 @@
+{
+  "name": "Alexa Reminders",
+  "version": "dev",
+  "slug": "reminders",
+  "description": "Create reminders on your Alexa device",
+  "url": "https://github.com/dumbstart/hassio-addons/tree/master/reminders",
+  "startup": "application",
+  "boot": "auto",
+  "hassio_api": true,
+  "homeassistant_api": true,
+  "host_network": true,
+  "privileged": [],
+  "map": [
+    "config:rw",
+    "ssl"
+  ],
+  "options": {
+    "amazon_login": "",
+    "amazon_password": "",
+    "alexa_device_name": ""
+  },
+  "schema": {
+    "amazon_login": "str",
+    "amazon_password": "str",
+    "alexa_device_name": "str"
+  }
+}
