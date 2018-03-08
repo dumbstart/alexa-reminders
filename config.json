@@ -6,8 +6,6 @@
   "url": "https://github.com/dumbstart/alexa-reminders.git",
   "startup": "application",
   "boot": "auto",
-  "hassio_api": true,
-  "homeassistant_api": true,
   "host_network": true,
   "privileged": [],
   "map": [
