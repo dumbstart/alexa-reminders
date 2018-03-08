@@ -4,11 +4,7 @@ FROM debian:jessie
 RUN apk add --no-cache \
         nodejs \
         nodejs-npm \
-    \
-    && npm set unsafe-perm true \
-    \
-    && npm -S install \
-        alexa-reminders
+RUN npm -S install alexa-reminders
         
 COPY index.js /
 
