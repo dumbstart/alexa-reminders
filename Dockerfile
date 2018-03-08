@@ -1,12 +1,7 @@
 FROM debian:jessie
 
 # Setup base
-RUN \
-    apt-get update && apt-get install -q -y --no-install-recommends \
-        jq \
-    \
-    && apk add --no-cache \
-        git \
+RUN apk add --no-cache \
         nodejs \
         nodejs-npm \
     \
@@ -14,7 +9,9 @@ RUN \
     \
     && npm -S install \
         alexa-reminders
+        
 COPY index.js /
+
 RUN \
     npm install
 
