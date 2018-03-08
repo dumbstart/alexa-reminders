@@ -17,6 +17,14 @@ COPY index.js /
 RUN \
     npm install
 
+EXPOSE 8091
+
+COPY run.sh /
+
+RUN chmod a+x /run.sh
+
+CMD [ "/run.sh" ]
+
 # Labels
 LABEL \
     io.hass.name="Alexa Reminders" \
@@ -33,10 +41,3 @@ LABEL \
     org.label-schema.vcs-url="https://github.com/dumbstart/alexa-reminders" \
     org.label-schema.vendor="Dumbstart Alexa Reminder"
 
-EXPOSE 8091
-
-COPY run.sh /
-
-RUN chmod a+x /run.sh
-
-CMD [ "/run.sh" ]

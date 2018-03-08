@@ -19,12 +19,12 @@
   },
   "options": {
     "amazon_login": "",
-    "amazon_password": "",
-    "alexa_device_name": ""
+    "amazon_pass": "",
+    "alexa_device": ""
   },
   "schema": {
     "amazon_login": "str",
-    "amazon_password": "str",
-    "alexa_device_name": "str"
+    "amazon_name": "str",
+    "alexa_device": "str"
   }
 }

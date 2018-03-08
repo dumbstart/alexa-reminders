@@ -1,4 +1,3 @@
-var CONFIG_PATH=/data/options.json
 var reminders = require('alexa-reminders')
 var express = require('express')
 var ngrok = require('ngrok')
@@ -8,12 +7,11 @@ const serverPort = 8091
 var savedConfig = {}
 var urlencodedParser = bodyParser.urlencoded({ extended: false })
 
-AMAZON_USER=$(jq --raw-output ".amazon_login" $CONFIG_PATH)
-AMAZON_PASS=$(jq --raw-output ".amazon_password" $CONFIG_PATH)
-AMAZON_NAME=$(jq --raw-output ".alexa_device_name" $CONFIG_PATH)
+var fs = require("fs");
+var contents = fs.readFileSync("/data/options.json");
+var hassio_config = JSON.parse(contents);
 
-
-reminders.login("$AMAZON_NAME", "$AMAZON_USER", "$AMAZON_PASS", function(error, response, config){
+reminders.login(hassio_config.alexa_device_name, hassio_config.amazon_login, hassio_config.amazon_pass, function(error, response, config){
   savedConfig = config
   console.log(response)
 })
