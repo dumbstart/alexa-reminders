@@ -5,6 +5,9 @@ ENV LANG C.UTF-8
 
 RUN apk add --no-cache nodejs
 RUN apk add --no-cache nodejs-npm
+RUN apk add --no-cache ngrok
+RUN apk add --no-cache express
+RUN apk add --no-cache body-parser
 COPY index.js /
 RUN npm install
 
