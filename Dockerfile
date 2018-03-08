@@ -31,8 +31,8 @@ LABEL \
     org.label-schema.build-date=${BUILD_DATE} \
     org.label-schema.name="Alexa Reminders" \
     org.label-schema.schema-version="1.0" \
-    org.label-schema.url="https://community.home-assistant.io/t/community-hass-io-add-on-homebridge/33803?u=frenck" \
-    org.label-schema.usage="https://github.com/dumbstart/hassio-addons/blob/master/README.md" \
+    org.label-schema.url="https://github.com/dumbstart/alexa-reminders" \
+    org.label-schema.usage="https://github.com/dumbstart/alexa-reminders/blob/master/README.md" \
     org.label-schema.vcs-ref=${BUILD_REF} \
     org.label-schema.vcs-url="https://github.com/dumbstart/alexa-reminders" \
-    org.label-schema.vendor="Dumbstart Hassio add-ons"
+    org.label-schema.vendor="Dumbstart Alexa Reminder"

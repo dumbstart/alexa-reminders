@@ -3,7 +3,7 @@
   "version": "dev",
   "slug": "reminders",
   "description": "Create reminders on your Alexa device",
-  "url": "https://github.com/dumbstart/hassio-addons/tree/master/reminders",
+  "url": "https://github.com/dumbstart/alexa-reminders.git",
   "startup": "application",
   "boot": "auto",
   "hassio_api": true,
