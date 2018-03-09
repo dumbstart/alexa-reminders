@@ -2,14 +2,15 @@ var reminders = require('alexa-reminders')
 var express = require('express')
 var ngrok = require('ngrok')
 var bodyParser = require('body-parser')
+var fs = require("fs")
 var app = express()
 const serverPort = 8091
 var savedConfig = {}
 var urlencodedParser = bodyParser.urlencoded({ extended: false })
 
-var fs = require("fs");
-var contents = fs.readFileSync("/data/options.json");
-var hassio_config = JSON.parse(contents);
+
+var contents = fs.readFileSync("/data/options.json")
+var hassio_config = JSON.parse(contents)
 
 reminders.login(hassio_config.alexa_device, hassio_config.amazon_login, hassio_config.amazon_pass, function(error, response, config){
   savedConfig = config

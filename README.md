@@ -1,3 +1,3 @@
-* Reminders
+# Reminders
 
-Test Reminders add-on for Hassio
+This doesn't work

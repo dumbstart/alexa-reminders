@@ -3,23 +3,31 @@ FROM $BUILD_FROM
 
 ENV LANG C.UTF-8
 
+COPY run.sh /
 COPY index.js /
 
 RUN \
     apk add --no-cache \
-        git \
         nodejs \
         nodejs-npm \
     \
-    && npm set unsafe-perm true \
+    && npm install \
     \
-    && npm -g install \
-        ngrok \
-        express \
-        body-parser \
-        alexa-reminders
+    && npm install ngrok \
+    \
+    && npm install express \
+    \
+    && npm install body-parser \
+    \
+    && npm install fs \
+    \
+    && npm install alexa-reminders
 
 RUN npm install
+
+RUN chmod a+x /run.sh
+
+CMD [ "/run.sh" ]
 
 # Labels
 LABEL \
