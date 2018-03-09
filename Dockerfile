@@ -3,13 +3,22 @@ FROM $BUILD_FROM
 
 ENV LANG C.UTF-8
 
-RUN apk add --no-cache nodejs
-RUN apk add --no-cache nodejs-npm
-RUN npm install ngrok
-RUN npm install express --save
-RUN npm install body-parser
-RUN npm install alexa-reminders
 COPY index.js /
+
+RUN \
+    apk add --no-cache \
+        git \
+        nodejs \
+        nodejs-npm \
+    \
+    && npm set unsafe-perm true \
+    \
+    && npm -g install \
+        ngrok \
+        express \
+        body-parser \
+        alexa-reminders
+
 RUN npm install
 
 # Labels
