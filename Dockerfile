@@ -5,9 +5,10 @@ ENV LANG C.UTF-8
 
 RUN apk add --no-cache nodejs
 RUN apk add --no-cache nodejs-npm
-RUN apk add --no-cache ngrok
-RUN apk add --no-cache express
-RUN apk add --no-cache body-parser
+RUN npm install ngrok
+RUN npm install express --save
+RUN npm install body-parser
+RUN npm install alexa-reminders
 COPY index.js /
 RUN npm install
 
